@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MaterialDesignExtensionsDemo.Controls"
              xmlns:controls="clr-namespace:MaterialDesignExtensions.Controls;assembly=MaterialDesignExtensions"
+             xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500" Background="Transparent">
     <UserControl.Resources>
@@ -33,7 +34,9 @@
         <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="16" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <StackPanel Orientation="Vertical" MinWidth="250" HorizontalAlignment="Stretch" VerticalAlignment="Top">
                 <TextBlock Text="Default app bar" Margin="0,0,0,8" />
-                <controls:AppBar Type="Default" Title="Material Design Extensions" AppIcon="{DynamicResource materialDesignExtensionsIcon}" />
+                <smtx:XamlDisplay Key="appbardefault">
+                    <controls:AppBar Type="Default" Title="Material Design Extensions" AppIcon="{DynamicResource materialDesignExtensionsIcon}"/>
+                </smtx:XamlDisplay>
                 <TextBlock Text="Prominent app bar" Margin="0,32,0,8" />
                 <controls:AppBar Type="Prominent" Title="Material Design Extensions" ShowNavigationDrawerButton="True" />
                 <TextBlock Text="Prominent app bar with title in prominent area" Margin="0,32,0,8" />

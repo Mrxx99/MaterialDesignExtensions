@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using ShowMeTheXAML;
+using System.Globalization;
 using System.Threading;
 using System.Windows;
 
@@ -11,6 +12,8 @@ namespace MaterialDesignExtensionsDemo
             // change the culture to test localized resource files for display strings
             /*Thread.CurrentThread.CurrentCulture = new CultureInfo("en-us");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");*/
+
+            XamlDisplay.Init();
         }
     }
 }
